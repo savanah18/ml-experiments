@@ -1,4 +1,4 @@
-root_dir:  /data/students/gerry
+root_dir:  /some/root/directory
 experiment_base_dir: ${root_dir}/experiments/llama.2/benchmarking/open-rewrite
 
 llama3_open_rewrite_benchmark:
