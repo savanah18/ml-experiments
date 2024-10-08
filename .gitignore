@@ -1,0 +1,13 @@
+# Ignore all Hydra outputs
+llama.2/benchmarking/open-rewrite/outputs/*
+
+# Ignore all datasets
+llama.2/benchmarking/open-rewrite/datasets/*
+
+# Ignore 
+*.log
+model/*
+
+# Ignore all pyc files
+__pycache__/
+*.py[cod]

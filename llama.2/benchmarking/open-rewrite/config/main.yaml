@@ -1,0 +1,33 @@
+root_dir:  /data/students/gerry
+experiment_base_dir: ${root_dir}/experiments/llama.2/benchmarking/open-rewrite
+
+llama3_open_rewrite_benchmark:
+  _target_: modules.benchmark_modules.LlamaOpenRewriteBenchmark
+  data_path: ${..experiment_base_dir}/datasets/openrewriteeval_aaai24.csv
+  model_ckpt_dir: /data/llm/llama/Llama-3.2-1B-Instruct/original
+  tokenizer_path: ${.model_ckpt_dir}/tokenizer.model
+  model_args:
+    build:
+      max_seq_len: 512
+      max_batch_size: 1
+      model_parallel_size: 1
+    generation:     
+      temperature: 0.6
+      top_p: 0.9
+      max_gen_len: 512
+
+# configuration for benchmarks for ease of use use when testing
+predict:
+  mode: full #full
+  prompt_engineered: true
+  n_rows: 1
+  frac: 0.1
+
+# benchmark test configuration
+# deprecate above in favor of below
+# test:
+#   predict:
+#     mode: full #full
+#     prompt_engineered: true
+#     n_rows: 1
+#     frac: 0.1
