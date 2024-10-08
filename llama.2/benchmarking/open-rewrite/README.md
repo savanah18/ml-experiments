@@ -11,6 +11,9 @@ This repository is an implementation of Open-rewrite benchmark on [llama 3.2](ht
 ## Environment
 1. An environment with 1 GPU is used for evaluation (as llama-models api by default use GPU)
 2. Libraries includes: `general: pandas, numpy, torch, etc`, `configuration: hydra-core`, `Model specific: llama-models`
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Experiment Configuration
 Experiment configuration can be found in `llama.2/benchmarking/open-rewrite/config/main.yaml` with sample configuration below.
