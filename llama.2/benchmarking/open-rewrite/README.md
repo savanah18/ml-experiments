@@ -48,9 +48,9 @@ predict:
     ```bash
     python benchmark.py
     ``` 
-2. Benchmark w/o prompt engineering
+2. Benchmark w/ parsing
     ```
-    python benchmark.py predict.prompt_engineered=false
+    python benchmark.py predict.prompt_engineered=false #todo -- change arg from prompt_engineered to parsed
     ```
 > Please see configuration above and `llama.2/benchmarking/open-rewrite/modules/benchmark_modules.py` code if you wish another configurations. 
 
@@ -59,5 +59,5 @@ predict:
 | Setup       | Rouge-L (micro-avg) |
 |-----------------|-------|
 | Meta (Reported)     | .416   |
-| Ours (with prompt engineering similar to meta)           | 0.401   |
-| Ours (with no prompt engineering)  | 0.319   |
+| Ours (with preparsing similar to meta)           | 0.401   |
+| Ours (without preparsing)  | 0.319   |
